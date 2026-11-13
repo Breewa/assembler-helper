@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-	echo 'Error, entry file not specified\nCorrect format: "ass <input file> -o <output file name'
+	echo 'Error, entry file not specified\nCorrect format: "ass <input file> -o <output file name>'
 	exit 1;
 fi
 
 if [ "$2" != '-o' ]; then
-	echo 'Error, invalid flag\nCorrect format: "ass <input file> -o <output file name'
+	echo 'Error, invalid flag\nCorrect format: "ass <input file> -o <output file name>'
 	exit 1
 fi
 
