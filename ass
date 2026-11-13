@@ -11,7 +11,7 @@ if [ "$2" != '-o' ]; then
 fi
 
 if [ -z "$3" ]; then
-	echo 'Error, output file not speficied\nCorrect format: "ass <input file> -o <output file name>"
+	echo 'Error, output file not speficied\nCorrect format: "ass <input file> -o <output file name>'
 	exit 1
 fi
 
