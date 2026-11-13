@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo 'Erro, arquivo não especificado'
+	exit 1;
+fi
+
+if [ "$2" != '-o' ]; then
+	echo 'Erro, inválido'
+	exit 1
+fi
+
+if [ -z "$3" ]; then
+	echo 'Erro, arquivo de saida não especificado'
+	exit 1
+fi
+
+as "$1" -o "$1.o"
+ld "$1.o" -o "$3"
+rm "$1.o"
+exit 0
+
+
+
+
