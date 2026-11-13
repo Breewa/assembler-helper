@@ -1,17 +1,17 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-	echo 'Erro, arquivo não especificado'
+	echo 'Error, entry file not specified'
 	exit 1;
 fi
 
 if [ "$2" != '-o' ]; then
-	echo 'Erro, inválido'
+	echo 'Error, invalid flag'
 	exit 1
 fi
 
 if [ -z "$3" ]; then
-	echo 'Erro, arquivo de saida não especificado'
+	echo 'Error, output file not speficied\nCorrect format: "ass <input file> -o <output file name>"
 	exit 1
 fi
 
