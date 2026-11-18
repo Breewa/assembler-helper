@@ -1,20 +1,33 @@
 #!/bin/bash
 
+as_path=$(which as 2>/dev/null)
+ld_path=$(which ld 2>/dev/null)
+
+if [ -z $as_path ]; then
+	echo "Error, as assembler not found. Install it and move it to a path folder"
+	exit 1
+fi
+
+if [ -z $ld_path ]; then
+	echo "Error, ld linker not found. Install it and move it to a path folder"
+	exit 1
+fi
+
 if [ -z "$1" ]; then
 	echo "Error, entry file not specified"
-	echo "Correct format: ass <input file> -o <output file name>"
-	exit 1;
+	echo "Correct format: ass <input file name> -o <output file name>"
+	exit 1
 fi
 
 if [ "$2" != '-o' ]; then
 	echo "Error, invalid flag"
-	echo "Correct format: ass <input file> -o <output file name>"
+	echo "Correct format: ass <input file name> -o <output file name>"
 	exit 1
 fi
 
 if [ -z "$3" ]; then
 	echo "Error, output file not speficied"
-	echo "Correct format: ass <input file> -o <output file name>"
+	echo "Correct format: ass <input file name> -o <output file name>"
 	exit 1
 fi
 
